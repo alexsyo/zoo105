@@ -5,32 +5,25 @@ import React from 'react';
 class Episode extends React.Component {
     constructor(props) {
         super(props);
+
+        this._setFields(this.props.day);
     }
 
-    // handleClick(url) {
-    //     this.setState({url: url});
-    //     console.log(this.state.url);
-    // };
+    _setFields(date) {
+        const DAY_NAMES = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
+        const DAY_NAME = DAY_NAMES[date.getDay()];
+        const DAY = date.getDate();
+        const MONTH = date.getMonth() + 1;
+        const YEAR = date.getFullYear();
 
-
-    static setFields(date) {
-        let dayNames = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
-        let dayName = dayNames[date.getDay()];
-        let day = date.getDate();
-        let month = date.getMonth() + 1;
-        let year = date.getFullYear();
-
-        let url = `${dayName}_${day}${month}${year}`;
-        let name = `${dayName} ${day}-${month}-${year}`;
-        let setEpisode = () => url;
-
-        return {url, name};
+        this.url = `${DAY_NAME}_${DAY}${MONTH}${YEAR}`;
+        this.name = `${DAY_NAME} ${DAY}-${MONTH}-${YEAR}`;
     }
 
     render() {
         return (
-            <div onClick={this.props.onClick.bind(this.props.data.url)}>
-                {this.props.data.name}
+            <div onClick={this.props.setEpisode.bind(null, this.url)}>
+                {this.name}
             </div>
         );
     }

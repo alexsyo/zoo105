@@ -8,19 +8,19 @@ class Options extends React.Component {
     constructor(props) {
         super(props);
 
-        this.episode = null;
-        this.period = new Period();
-        this.period.setDate();
-        this.week = this.period.getWeek();
+        this.week = Period.getWeek();
     }
 
     render() {
         return (
             <div>
                 {this.week.map((day) => {
-                    let fields = Episode.setFields(day);
-
-                    return <Episode onClick={this.props.setEpisode.bind(null, fields.url)} key={fields.url} data={fields} />;
+                    return ( 
+                        <Episode
+                            key={day}
+                            day={day} 
+                            setEpisode={this.props.setEpisode} />
+                    );
                 })}
             </div>
         );
