@@ -14,10 +14,10 @@ class Options extends React.Component {
     render() {
         return (
             <div>
-                {this.week.map((day) => {
+                {this.week.map((day, i) => {
                     return ( 
                         <Episode
-                            key={day}
+                            key={i}
                             day={day} 
                             setEpisode={this.props.setEpisode} />
                     );
