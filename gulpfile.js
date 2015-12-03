@@ -16,8 +16,15 @@ gulp.task('html', () => {
         .pipe(connect.reload());
 });
 
+gulp.task('css', () => {
+    gulp.src('./app/css/*')
+        .pipe(concat('main.css'))
+        .pipe(gulp.dest('./dist/www/css/'))
+        .pipe(connect.reload());
+});
+
 gulp.task('jsx', () => {
-    browserify('./app/jsx/App.jsx', {debug: true})
+    browserify('./app/jsx/Start.jsx', {debug: true})
         .transform(babelify, {
             presets: ['es2015', 'react']
         }).bundle()
@@ -37,6 +44,7 @@ gulp.task('vendor', () => {
 
 gulp.task('watch', () => {
     gulp.watch('./app/*.html', ['html']);
+    gulp.watch('./app/css/*', ['css']);
     gulp.watch('./app/jsx/*.jsx', ['jsx']);
 });
 
@@ -56,5 +64,5 @@ gulp.task('buildVendor', () => {
         .pipe(gulp.dest('./dist/www/js/')); 
 });
 
-gulp.task('default', ['html', 'jsx', 'vendor', 'watch', 'connect']);
+gulp.task('default', ['html', 'css', 'jsx', 'vendor', 'watch', 'connect']);
 gulp.task('build', ['html', 'jsx', 'buildVendor']);

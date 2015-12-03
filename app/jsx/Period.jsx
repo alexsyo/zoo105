@@ -1,17 +1,18 @@
 'use strict';
 
 class Period {
+
     static getWeek() {
-        let week = [];
-        const TODAY = new Date();
         const MAX_WEEK_DAYS = 7;
+        let week = [];
+        let today = new Date();
 
         for(let i=0;i<MAX_WEEK_DAYS;i++) {
-            const PAST_DAY = (new Date()).setDate(TODAY.getDate() - i);
-            const READABLE_DATE = new Date(PAST_DAY);
+            let day = (new Date()).setDate(today.getDate() - i);
+            let readableDate = new Date(day);
 
-            if(READABLE_DATE.getDay() !== 6 && READABLE_DATE.getDay() !== 0) {
-                week.push(READABLE_DATE);
+            if(readableDate.getDay() !== 6 && readableDate.getDay() !== 0) {
+                week.push(readableDate);
             }
         }
 

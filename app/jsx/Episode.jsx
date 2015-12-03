@@ -6,27 +6,29 @@ class Episode extends React.Component {
     constructor(props) {
         super(props);
 
+        this._setFields = (date) => {
+            const WEEK = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
+            let dayName = WEEK[date.getDay()];
+            let day = date.getDate();
+            let month = date.getMonth() + 1;
+            let year = date.getFullYear();
+
+            this.episode = `${dayName}_${day}${month}${year}`;
+            this.name = `${dayName} ${day}-${month}-${year}`;
+        };
+
         this._setFields(this.props.day);
-    }
-
-    _setFields(date) {
-        const DAY_NAMES = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
-        const DAY_NAME = DAY_NAMES[date.getDay()];
-        const DAY = date.getDate();
-        const MONTH = date.getMonth() + 1;
-        const YEAR = date.getFullYear();
-
-        this.url = `${DAY_NAME}_${DAY}${MONTH}${YEAR}`;
-        this.name = `${DAY_NAME} ${DAY}-${MONTH}-${YEAR}`;
     }
 
     render() {
         return (
-            <div onClick={this.props.setEpisode.bind(null, this.url)}>
+            <div className={(this.episode === this.props.episode) ? 'selected' : 'default' } 
+                onClick={this.props.setEpisode.bind(null, this.episode)}>
                 {this.name}
             </div>
         );
     }
+
 }
 
 export default Episode;
