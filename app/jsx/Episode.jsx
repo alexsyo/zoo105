@@ -3,10 +3,14 @@
 import React from 'react';
 
 class Episode extends React.Component {
+
     constructor(props) {
+
         super(props);
 
+
         this._setFields = (date) => {
+
             const WEEK = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
             let dayName = WEEK[date.getDay()];
             let day = (date.getDate() < 10) ? '0' + date.getDate() : date.getDate();
@@ -15,19 +19,25 @@ class Episode extends React.Component {
 
             this.episode = `${dayName}_${day}${month}${year}`;
             this.name = `${dayName} ${day}-${month}-${year}`;
+
         };
 
         this._setFields(this.props.day);
     }
 
     render() {
+
         return (
+
             <div className={(this.episode === this.props.episode) ? 'selected' : 'default' } 
                 onClick={this.props.handleEpisodeChange.bind(null, this.episode)}>
                 {this.name}
             </div>
+
         );
+        
     }
+
 
 }
 
