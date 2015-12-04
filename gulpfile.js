@@ -33,6 +33,11 @@ gulp.task('jsx', () => {
         .pipe(connect.reload());
 });
 
+gulp.task('config', () => {
+    gulp.src('./app/config.xml')
+        .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('vendor', () => {
     gulp.src([
         './bower_components/react/react.js',
@@ -46,6 +51,7 @@ gulp.task('watch', () => {
     gulp.watch('./app/*.html', ['html']);
     gulp.watch('./app/css/*', ['css']);
     gulp.watch('./app/jsx/*.jsx', ['jsx']);
+    gulp.watch('./app/config.xml', ['config']);
 });
 
 gulp.task('connect', () => {
@@ -64,5 +70,5 @@ gulp.task('buildVendor', () => {
         .pipe(gulp.dest('./dist/www/js/')); 
 });
 
-gulp.task('default', ['html', 'css', 'jsx', 'vendor', 'watch', 'connect']);
+gulp.task('default', ['html', 'css', 'jsx', 'config', 'vendor', 'watch', 'connect']);
 gulp.task('build', ['html', 'jsx', 'buildVendor']);

@@ -9,7 +9,7 @@ class App extends React.Component{
         super(props);
         this.state = {episode: null};
         
-        this.setEpisode = (episode) => {
+        this.handleEpisodeChange = (episode) => {
             this.setState({episode});
         };
     }
@@ -17,7 +17,7 @@ class App extends React.Component{
     render() {
         return (
             <div>
-                <Options episode={this.state.episode} setEpisode={this.setEpisode} />
+                <Options episode={this.state.episode} handleEpisodeChange={this.handleEpisodeChange} />
                 <Player episode={this.state.episode} />
             </div>
         );

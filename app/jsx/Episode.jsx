@@ -9,8 +9,8 @@ class Episode extends React.Component {
         this._setFields = (date) => {
             const WEEK = ['dom', 'lun', 'mar', 'mer', 'gio', 'ven', 'sab'];
             let dayName = WEEK[date.getDay()];
-            let day = date.getDate();
-            let month = date.getMonth() + 1;
+            let day = (date.getDate() < 10) ? '0' + date.getDate() : date.getDate();
+            let month = (date.getMonth() + 1 < 10) ? '0' + (date.getMonth() + 1) : date.getMonth() + 1;
             let year = date.getFullYear();
 
             this.episode = `${dayName}_${day}${month}${year}`;
@@ -23,7 +23,7 @@ class Episode extends React.Component {
     render() {
         return (
             <div className={(this.episode === this.props.episode) ? 'selected' : 'default' } 
-                onClick={this.props.setEpisode.bind(null, this.episode)}>
+                onClick={this.props.handleEpisodeChange.bind(null, this.episode)}>
                 {this.name}
             </div>
         );

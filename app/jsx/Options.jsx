@@ -19,7 +19,7 @@ class Options extends React.Component {
                             key={i}
                             day={day}
                             episode={this.props.episode}
-                            setEpisode={this.props.setEpisode} />
+                            handleEpisodeChange={this.props.handleEpisodeChange} />
                     );
                 })}
             </div>
