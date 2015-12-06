@@ -3,10 +3,13 @@
 <dl>
     <dt>Work in progress</dt>
     <dd>ToDo:<dd>
-        * change slider style
-        * change button style (gradient)
-        * optimize css and foundation classes on large, medium and old android system
+        ..* change slider style
+        ..* change button style (gradient)
+        ..* optimize css and foundation classes on large, medium and old android system
 </dl>
+
+## Description
+
 <dl>
     <dd>Fetch and play audio files from an API.</dd>
     <dd>Mobile app written in react and es2015</dd>
