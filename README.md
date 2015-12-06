@@ -5,8 +5,9 @@
     <dd>ToDo:<dd>
     <dl>
         <dd>1. optimize css and foundation classes on large, medium and old android system</dd>
-        <dd>2. change slider style</dd>
-        <dd>3. change button style (gradient)</dd>
+        <dd>2. write tests</dd>
+        <dd>3. change slider style</dd>
+        <dd>4. change button style (gradient)</dd>
     </dl>
 </dl>
 
