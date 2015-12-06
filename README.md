@@ -1,11 +1,11 @@
-# zoo105
+# Zoo105
 
 <dl>
     <dt>Work in progress</dt>
     <dd>ToDo:<dd>
-        ..* change slider style
-        ..* change button style (gradient)
-        ..* optimize css and foundation classes on large, medium and old android system
+        1. optimize css and foundation classes on large, medium and old android system
+        2. change slider style
+        3. change button style (gradient)
 </dl>
 
 ## Description
