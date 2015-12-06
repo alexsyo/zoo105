@@ -32,7 +32,7 @@ class App extends React.Component{
 
         return (
 
-            <div>
+            <div className="grid-block vertical">
                 <Options episode={this.state.episode} handleEpisodeChange={this.handleEpisodeChange} />
                 <Player audio={this.audio} />
             </div>

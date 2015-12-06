@@ -1,0 +1,55 @@
+$dark: #303030;
+$light: #F8F8F8;
+
+#content {
+    background-color: $dark;
+}
+
+.default {
+    color: $light;
+}
+
+.selected {
+    background-color: $light;
+    color: $dark;
+}
+
+.episode {
+    padding: 15px;
+    border-bottom: 1px solid $light;
+}
+
+.controls {
+    background-color: $light;
+    border-radius: 5000000px;
+    width: 200px;
+    height: 200px;
+}
+
+.play {
+    border-left: 50px solid $dark;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    margin-left: 80px;
+}
+
+.pause {
+    background-color: $dark;
+    height: 50px;
+    width: 20px;
+    margin-left: 75px;
+}
+
+.pause::after {
+    content: "";
+    position: absolute;
+    background-color: $dark;
+    height: 50px;
+    width: 20px;
+    margin-left: 30px;
+}
+
+#bar {
+    background-color: transparent; 
+    padding: 15px;
+}

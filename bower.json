@@ -17,5 +17,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "foundation-apps": "~1.2.0"
+  }
 }

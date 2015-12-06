@@ -17,7 +17,7 @@ class Options extends React.Component {
 
         return (
 
-            <div>
+            <div className="grid-block vertical shrink">
 
                 {this.week.map((day, i) => {
 

@@ -27,10 +27,11 @@ class Episode extends React.Component {
     render() {
         
         this._setFields(this.props.day);
+        const CLASSES = 'grid-block small-12 align-center episode ';
 
         return (
 
-            <div className={(this.episode === this.props.episode) ? 'selected' : 'default' } 
+            <div className={((this.episode === this.props.episode) ? CLASSES + 'selected' : CLASSES + 'default')} 
                 onClick={this.props.handleEpisodeChange.bind(null, this.episode)}>
                 {this.name}
             </div>

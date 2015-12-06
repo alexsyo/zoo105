@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const connect = require('gulp-connect');
 const htmlmin = require('gulp-htmlmin');
+const sass = require('gulp-ruby-sass');
 const babelify = require('babelify');
 const concat = require('gulp-concat');
 const browserify = require('browserify');
@@ -17,7 +18,10 @@ gulp.task('html', () => {
 });
 
 gulp.task('css', () => {
-    gulp.src('./app/css/*')
+    sass([
+        './bower_components/foundation-apps/scss/*.scss',
+        './app/css/*.scss'
+    ], {style: 'compressed'})
         .pipe(concat('main.css'))
         .pipe(gulp.dest('./dist/www/css/'))
         .pipe(connect.reload());
@@ -38,11 +42,14 @@ gulp.task('config', () => {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('vendor', () => {
-    gulp.src([
-        './bower_components/react/react.js',
-        './bower_components/react/react-dom.js'
-    ])
+gulp.task('vendorCss', () => {
+    gulp.src('./bower_components/foundation-apps/dist/css/foundation-apps.min.css')
+        .pipe(concat('vendor.css'))
+        .pipe(gulp.dest('./dist/www/css/'));
+});
+
+gulp.task('vendorJs', () => {
+    gulp.src('./node_modules/react-foundation-apps/dist/react-foundation-apps.js')
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('./dist/www/js/'));
 });
@@ -61,14 +68,5 @@ gulp.task('connect', () => {
     });
 });
 
-gulp.task('buildVendor', () => {
-    gulp.src([
-        './bower_components/react/react.min.js',
-        './bower_components/react/react-dom.min.js'
-    ])
-        .pipe(concat('vendor.js'))
-        .pipe(gulp.dest('./dist/www/js/')); 
-});
-
-gulp.task('default', ['html', 'css', 'jsx', 'config', 'vendor', 'watch', 'connect']);
+gulp.task('default', ['html', 'css', 'jsx', 'config', 'watch', 'connect']);
 gulp.task('build', ['html', 'jsx', 'buildVendor']);

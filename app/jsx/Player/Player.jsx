@@ -36,7 +36,7 @@ class Player extends React.Component {
 
         return (
 
-            <div>
+            <div className="grid-block vertical">
                 <Bar audio={this.props.audio} />
                 <Controls isPlaying={this.state.isPlaying} handlePlayingChange={this.handlePlayingChange} />
             </div>

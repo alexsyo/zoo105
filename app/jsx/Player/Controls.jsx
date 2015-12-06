@@ -12,11 +12,15 @@ class Controls extends React.Component {
 
     render() {
 
+        const CENTER = 'v-align grid-container ';
+
         return(
 
-            <button onClick={this.props.handlePlayingChange}>
-                {(!this.props.isPlaying) ? 'Play' : 'Pause'}
-            </button>
+            <div className="grid-block v-align">
+                <div className={CENTER + 'controls'} onClick={this.props.handlePlayingChange}>
+                    <div className={(!this.props.isPlaying) ? CENTER + 'play' : CENTER + 'pause'}></div>
+                </div>
+            </div>
 
         );
 

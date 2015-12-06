@@ -34,13 +34,13 @@ class Bar extends React.Component {
 
         return(
 
-            <div>
-                <input type="range" 
+            <div className="grid-block shrink">
+                <input
+                    id="bar"
+                    type="range" 
                     max={this.state.duration}
                     value={this.state.position}
                     onChange={this.handleBarChange} />
-                <div>{this.state.position}</div>
-                <div>{this.state.duration}</div>
             </div>
 
         );
