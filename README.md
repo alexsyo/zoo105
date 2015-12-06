@@ -3,9 +3,11 @@
 <dl>
     <dt>Work in progress</dt>
     <dd>ToDo:<dd>
-        1. optimize css and foundation classes on large, medium and old android system
-        2. change slider style
-        3. change button style (gradient)
+    <dl>
+        <dd>1. optimize css and foundation classes on large, medium and old android system</dd>
+        <dd>2. change slider style</dd>
+        <dd>3. change button style (gradient)</dd>
+    </dl>
 </dl>
 
 ## Description
