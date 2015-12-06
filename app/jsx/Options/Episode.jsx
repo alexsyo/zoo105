@@ -22,10 +22,11 @@ class Episode extends React.Component {
 
         };
 
-        this._setFields(this.props.day);
     }
 
     render() {
+        
+        this._setFields(this.props.day);
 
         return (
 
