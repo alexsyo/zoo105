@@ -1,40 +1,47 @@
+@import '../../bower_components/foundation-apps/scss/foundation';
+
 $dark: #303030;
-$light: #F8F8F8;
+$gradient: #1a0019;
+$light: #D8D8D8;
 
 #content {
-    background-color: $dark;
+    background: linear-gradient(to bottom left, $dark 30%, $gradient 85%);
 }
 
 .default {
+    cursor: pointer;
+    background-color: rgba(216,216,216,0.2);
     color: $light;
 }
 
 .selected {
-    background-color: $light;
-    color: $dark;
+    cursor: pointer;
+    background-color: rgba(80,80,80,0.2);
+    color: $light;
 }
 
 .episode {
     padding: 15px;
-    border-bottom: 1px solid $light;
+    border-bottom: 1px solid $dark;
 }
 
 .controls {
-    background-color: $light;
+    background-color: rgba(216,216,216,0.2);
+    box-shadow: 0px 0px 10px $light inset;
     border-radius: 5000000px;
     width: 200px;
     height: 200px;
 }
 
 .play {
-    border-left: 50px solid $dark;
+    border-left: 50px solid $light;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     margin-left: 80px;
 }
 
 .pause {
-    background-color: $dark;
+    background-color: $light;
     height: 50px;
     width: 20px;
     margin-left: 75px;
@@ -43,7 +50,7 @@ $light: #F8F8F8;
 .pause::after {
     content: "";
     position: absolute;
-    background-color: $dark;
+    background-color: $light;
     height: 50px;
     width: 20px;
     margin-left: 30px;
