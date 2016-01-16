@@ -12,7 +12,7 @@ npm install -g bower gulp phonegap
 
 ## Prepare
 
-Install modules:
+Install the modules:
 ```
 npm install
 ```
