@@ -33,7 +33,7 @@ gulp
 
 ## Build
 
-Build the App:
+Prepare the App:
 ```
 gulp build
 ```
