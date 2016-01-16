@@ -1,6 +1,6 @@
 # Zoo105
 
- - Mobile app written in react and es2015
+ - Mobile app written in react.js and es2015
  - Fetch and play audio files from an API
 
 ## Requirements
