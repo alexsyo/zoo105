@@ -7,8 +7,10 @@
 
 ## Requirements
 
-Run:
- * npm intall -g bower gulp phonegap
+Install `bower`,
+```
+npm intall -g bower gulp phonegap
+```
 
 ## Prepare
 
