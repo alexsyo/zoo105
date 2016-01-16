@@ -10,6 +10,7 @@ const concat = require('gulp-concat');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const reactify = require('reactify');
+const replace = require('gulp-replace');
 
 gulp.task('html', () => {
     gulp.src('./app/*.html')
@@ -58,4 +59,17 @@ gulp.task('connect', () => {
     });
 });
 
-gulp.task('default', ['html', 'css', 'jsx', 'config', 'watch', 'connect']);
+gulp.task('prepare.test', () => {
+    gulp.src('./app/jsx/App.jsx')
+        .pipe(replace(/(\/\/ )?import\ Media/, 'import Media'))
+        .pipe(gulp.dest('./app/jsx/'));
+});
+
+gulp.task('prepare.build', () => {
+    gulp.src('./app/jsx/App.jsx')
+        .pipe(replace(/(\/\/ )?import\ Media/, '// import Media'))
+        .pipe(gulp.dest('./app/jsx/'));
+});
+
+gulp.task('default', ['prepare.test', 'html', 'css', 'jsx', 'watch', 'connect']);
+gulp.task('build', ['prepare.build', 'html', 'css', 'jsx', 'config']);

@@ -3,7 +3,7 @@
 import React from 'react';
 import Options from './Options/Options.jsx';
 import Player from './Player/Player.jsx';
-// import Media from '../../test/Media';
+import Media from '../../test/Media';
 
 class App extends React.Component{
 

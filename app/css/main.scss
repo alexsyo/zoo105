@@ -3,6 +3,7 @@
 $dark: #303030;
 $gradient: #1a0019;
 $light: #D8D8D8;
+$transparent: rgba(216,216,216,0.2);
 
 #content {
     background: linear-gradient(to bottom left, $dark 30%, $gradient 85%);
@@ -10,7 +11,7 @@ $light: #D8D8D8;
 
 .default {
     cursor: pointer;
-    background-color: rgba(216,216,216,0.2);
+    background-color: $transparent;
     color: $light;
 }
 
@@ -26,7 +27,7 @@ $light: #D8D8D8;
 }
 
 .controls {
-    background-color: rgba(216,216,216,0.2);
+    background-color: $transparent;
     box-shadow: 0px 0px 10px $light inset;
     border-radius: 5000000px;
     width: 200px;
@@ -58,5 +59,14 @@ $light: #D8D8D8;
 
 #bar {
     background-color: transparent; 
-    padding: 15px;
+    padding: 30px 20px 10px;;
+    &::-webkit-slider-thumb {
+        border-radius: 10px;
+        background-color: $light;
+        box-shadow: 0px 0px 10px $gradient;
+    }
+    &::-webkit-slider-runnable-track {
+        border-radius: 5px;
+        background-color: $transparent;
+    }
 }
