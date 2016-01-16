@@ -5,60 +5,34 @@
     <dd>Mobile app written in react and es2015</dd>
 </dl>
 
-###Example
- - Item 1
- - Item 2
-  - Sub Item 1
-  - Sub Item 2
-
-  ###Example
-* Item 1
-* Item 2
-  * Sub Item 1
-  * Sub Item 2
-
-
 ## Requirements
 
-<dl>
-    <dd>Run:</dd>
-    <dl>
-        <dd>    npm intall -g bower gulp phonegap</dd>
-    </dl>
-</dl>
+Run:
+ * npm intall -g bower gulp phonegap
 
 ## Prepare
 
-<dl>
-    <dd>Run:</dd>
-    <dl>
-        <dd>    npm install</dd>
-        <dd>    bower install</dd>
-        <dd>    phongap create dist</dd>
-    </dl>
-</dl>
-
+Run:
+ * npm install
+ * bower install
+ * phongap create dist
+    
 ## Test
 
 <dl>
-    <dd>Require the Chrome extension Ripple Emulator</dd>
+    <dd>Require the Chrome extension 'Ripple Emulator'</dd>
     <dd>Run:</dd>
-    <dl>
-        <dd>    gulp</dd>
-    </dl>
 </dl>
+ * gulp
 
 ## Build
 
-<dl>
-    <dd>Run:</dd>
-    <dl>
-        <dd>    gulp build</dd>
-        <dd>    phonegap remote login (require an Adobe or build.phongap account)</dd>
-        <dd>    phonegap remote build android </dd>
-    </dl>
-    <dd>Download the .apk file from build.phonegap.com</dd>
-</dl>
+Run:
+ * gulp build
+ * phonegap remote login (require an Adobe or build.phongap account)
+ * phonegap remote build android
+
+Download the .apk file from build.phonegap.com
 
 ## Phonegap
 
