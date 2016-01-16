@@ -10,7 +10,7 @@
 <dl>
     <dd>Run:</dd>
     <dl>
-        <dd>npm intall -g bower gulp phonegap</dd>
+        <dd>    npm intall -g bower gulp phonegap</dd>
     </dl>
 </dl>
 
@@ -19,9 +19,9 @@
 <dl>
     <dd>Run:</dd>
     <dl>
-        <dd>npm install</dd>
-        <dd>bower install</dd>
-        <dd>phongap create dist</dd>
+        <dd>    npm install</dd>
+        <dd>    bower install</dd>
+        <dd>    phongap create dist</dd>
     </dl>
 </dl>
 
@@ -31,7 +31,7 @@
     <dd>Require the Chrome extension Ripple Emulator</dd>
     <dd>Run:</dd>
     <dl>
-        <dd>gulp</dd>
+        <dd>    gulp</dd>
     </dl>
 </dl>
 
@@ -40,11 +40,11 @@
 <dl>
     <dd>Run:</dd>
     <dl>
-        <dd>gulp build</dd>
-        <dd>phonegap remote login (require an Adobe or build.phongap account)</dd>
-        <dd>phonegap remote build android </dd>
+        <dd>    gulp build</dd>
+        <dd>    phonegap remote login (require an Adobe or build.phongap account)</dd>
+        <dd>    phonegap remote build android </dd>
     </dl>
-    <dd>Download .apk file from build.phonegap.com</dd>
+    <dd>Download the .apk file from build.phonegap.com</dd>
 </dl>
 
 ## Phonegap
