@@ -1,42 +1,53 @@
 # Zoo105
 
-<dl>
-    <dd>Fetch and play audio files from an API.</dd>
-    <dd>Mobile app written in react and es2015</dd>
-</dl>
+ - Mobile app written in react and es2015
+ - Fetch and play audio files from an API
 
 ## Requirements
 
-Install `bower`,
+Install `bower`, `gulp`, `phonegap`:
 ```
-npm intall -g bower gulp phonegap
+npm install -g bower gulp phonegap
 ```
 
 ## Prepare
 
-Run:
- * npm install
- * bower install
- * phongap create dist
+Install modules:
+```
+npm install
+```
+```
+bower install
+```
+Create the app boilerplate:
+```
+phongap create dist
+```
     
-## Test
+## Preview
 
-<dl>
-    <dd>Require the Chrome extension 'Ripple Emulator'</dd>
-    <dd>Run:</dd>
-</dl>
- * gulp
+Preview the app on Google Chrome (Require the extension 'Ripple Emulator' installed):
+```
+gulp
+```
 
 ## Build
 
-Run:
- * gulp build
- * phonegap remote login (require an Adobe or build.phongap account)
- * phonegap remote build android
-
+Build the App:
+```
+gulp build
+```
+Login to build.phonegap.com with your Adobe credentials:
+```
+phonegap remote login
+```
+Build the app for the Android platform:
+```
+phonegap remote build android
+ ```
 Download the .apk file from build.phonegap.com
 
-## Phonegap
+## Phonegap Reference
 
 | Action | Command |
 |--------|---------|
