@@ -26,7 +26,7 @@ phongap create dist
     
 ## Preview
 
-Preview the app on Google Chrome (Require the extension 'Ripple Emulator' installed):
+Preview the app on Google Chrome (require the extension 'Ripple Emulator' installed):
 ```
 gulp
 ```
